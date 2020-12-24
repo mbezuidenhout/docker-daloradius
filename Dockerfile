@@ -14,7 +14,7 @@ RUN apt-get update \
 
 RUN update-ca-certificates -f \
  && docker-php-ext-install mysqli \
- && docker-php-ext-install db \
+ && docker-php-ext-install gd \
  && mkdir -p /tmp/pear/cache \
  && curl -O https://pear.php.net/go-pear.phar \
  && echo | php go-pear.phar \
